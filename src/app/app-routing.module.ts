@@ -5,7 +5,7 @@ import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.componen
 import { ContactoComponent } from './contacto/contacto.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { PoliticaPrivacidadComponent } from './politica-privacidad/politica-privacidad.component';
-
+  
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'sobre-nosotros', component: SobreNosotrosComponent },

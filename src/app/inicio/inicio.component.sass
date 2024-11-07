@@ -1,25 +1,140 @@
-// Hero Section
-.hero-section
-  background-color: #007bff
-  color: white
-  padding: 50px 0
-  text-align: center
+/* Estilos generales para todo el sitio */
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
 
-// Funcionalidades
+html, body
+  height: 100%
+  font-family: 'Roboto', sans-serif
+  background-color: #fff
+  color: #333
+  line-height: 1.6
+  display: flex
+  flex-direction: column
+
+body
+  padding-bottom: 60px /* Evitar que el contenido quede oculto por el footer */
+
+/* Colores generales */
+$color-principal: #5ea8a7
+$color-secundario: #257985
+$color-texto: #333
+
+/* Estilos para la tarjeta de bienvenida */
+.welcome-card
+  background-color: $color-principal  /* Color Lagoon */
+  border-radius: 15px  /* Bordes redondeados */
+  padding: 2rem  /* Espaciado interior */
+  color: white  /* Texto blanco dentro de la tarjeta */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1)  /* Sombra suave para la tarjeta */
+  
+  .hero-content
+    max-width: 800px  /* Limitar el ancho máximo del contenido */
+    margin: 0 auto  /* Centrar el contenido */
+  
+  h1
+    font-size: 2.5rem
+    font-weight: 600
+    
+  p
+    font-size: 1.15rem
+  
+  .btn-lagoon
+    background-color: white
+    color: $color-principal
+    padding: 10px 20px
+    border-radius: 50px
+    font-weight: 600
+    text-transform: uppercase
+    transition: background-color 0.3s ease
+  
+    &:hover
+      background-color: $color-secundario
+      color: white
+
+/* Estilos para las secciones */
+section
+  display: flex
+  justify-content: center  /* Centra horizontalmente */
+  align-items: center  /* Centra verticalmente */
+  text-align: center  /* Centra el texto dentro de las secciones */
+
+/* Sección de características */
 .features
-  background-color: #f8f9fa
-  padding: 30px 0
+  padding: 3rem 0
 
-.features .card
-  border: none
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+.features h2
+  font-size: 1.8rem
+  font-weight: 600
+  margin-bottom: 2rem /* Mayor espacio debajo del título */
 
-.features .card-body
+/* Usamos flexbox para la disposición de las tarjetas */
+.features .row
+  display: flex
+  justify-content: space-between /* Las tarjetas se distribuyen equitativamente */
+  gap: 2rem /* Espacio entre las tarjetas */
+  flex-wrap: wrap /* Las tarjetas se adaptarán si no caben en una fila */
+
+/* Cada tarjeta ocupará el 30% del ancho en pantallas grandes */
+.feature-card
+  background-color: #fff
+  border-radius: 15px
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
+  padding: 1.5rem
   text-align: center
+  transition: all 0.3s ease
+  cursor: pointer
+  flex: 0 0 30% /* Cada tarjeta ocupa el 30% del ancho en pantallas grandes */
+  margin-bottom: 2rem /* Mayor espacio debajo de cada tarjeta */
 
-// CTA
-.cta
-  background-color: #f4f4f4
-  padding: 40px 0
-  h2
-    font-size: 2rem
+/* Comportamiento en hover */
+.feature-card:hover
+  transform: scale(1.05)
+  background-color: #f0f0f0
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15)
+
+.feature-card i
+  color: $color-secundario
+  margin-bottom: 0.5rem
+  transition: all 0.3s ease
+
+.feature-card:hover i
+  color: $color-principal
+
+.feature-card h3
+  font-size: 1.35rem
+  font-weight: 600
+  color: $color-secundario
+
+.feature-card p
+  font-size: 0.95rem
+  color: #666
+
+/* Botón de la sección de bienvenida */
+.btn-lagoon
+  background-color: $color-principal
+  border: none
+  border-radius: 50px
+  padding: 8px 18px
+  font-size: 1rem
+  text-transform: uppercase
+  color: white
+  cursor: pointer
+  transition: background-color 0.3s ease
+
+  &:hover
+    background-color: $color-secundario
+
+/* Sección de testimonios */
+.testimonials
+  background-color: #f5f5f5
+  padding: 2.5rem 0
+
+.testimonials .testimonial
+  font-size: 1.1rem
+  color: #444
+
+.testimonials h5
+  margin-top: 0.75rem
+  font-weight: 600

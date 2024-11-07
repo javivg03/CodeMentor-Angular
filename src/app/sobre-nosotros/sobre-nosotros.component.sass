@@ -1,22 +1,81 @@
-/* Estilos para la página "Sobre Nosotros" */
-.sobre-nosotros
-  background-color: #f0f0f0
-  padding: 3rem 0
+@import '../../styles.sass'
+/* Estilos específicos de la página Sobre Nosotros */
+.sobre-nosotros-container
+  padding: 5rem 0
+  background-color: #fff
 
-.sobre-nosotros .contenido
-  max-width: 900px
-  margin: 0 auto
-  padding: 1.5rem
-  background-color: white
-  border-radius: 8px
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
-
-.sobre-nosotros h1
+h1
   font-size: 2.5rem
-  margin-bottom: 1rem
+  font-weight: 600
+  text-align: center
+  margin-bottom: 3rem
 
-.sobre-nosotros p
-  font-size: 1rem
-  color: #555
-  line-height: 1.8
-  margin-bottom: 1.5rem
+h3
+  font-size: 1.75rem
+  font-weight: 600
+  color: $color-secundario
+  text-align: center
+
+p
+  font-size: 1.15rem
+  color: #333
+  text-align: justify
+
+ul
+  list-style-type: none
+  padding-left: 0
+  margin: 0
+
+li
+  font-size: 1.1rem
+  color: #666
+  margin-bottom: 0.75rem
+  display: flex
+  align-items: center
+  gap: 10px
+
+/* Tarjetas (Misión, Visión y Valores) */
+.card
+  background-color: #fff
+  border-radius: 15px
+  padding: 2rem
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
+  margin-bottom: 2rem
+  transition: transform 0.3s ease
+  text-align: center
+
+.card:hover
+  transform: translateY(-5px)
+
+.card h3
+  font-size: 1.75rem
+  font-weight: 600
+  color: $color-secundario
+
+.card p
+  font-size: 1.15rem
+  color: #666
+  text-align: justify
+
+/* Tarjeta de valores - ahora con el mismo diseño de las otras */
+.card ul
+  margin-top: 1.5rem
+  padding-left: 0
+  margin-top: 1.5rem
+
+.card li
+  font-size: 1.1rem
+  color: #666
+  margin-bottom: 1rem
+  display: flex
+  align-items: center
+  gap: 15px
+
+/* Iconos en la tarjeta de valores */
+.card i
+  font-size: 1.5rem
+  color: #666
+  transition: color 0.3s ease
+
+.card li:hover i
+  color: $color-principal
