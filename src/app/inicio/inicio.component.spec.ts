@@ -19,3 +19,9 @@ describe('InicioComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+testimonios = [
+  { texto: "CodeMentor ha cambiado mi forma de estudiar.", autor: "Juan Pérez, Estudiante de Desarrollo Web" },
+  { texto: "Una herramienta indispensable para organizarme.", autor: "Laura García, Ingeniera de Software" },
+  { texto: "El mejor recurso para mejorar mi aprendizaje.", autor: "Carlos Sánchez, Programador Junior" }
+];
