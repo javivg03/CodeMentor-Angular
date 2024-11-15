@@ -1,24 +1,24 @@
-/* Estilos generales para todo el sitio */
-html, body
-  height: 100%  /* Asegura que el body ocupe toda la altura de la pantalla */
-  display: flex
-  flex-direction: column  /* Coloca el contenido en una columna */
-  font-family: 'Roboto', sans-serif
-  background-color: #fff
-  color: #333
-  line-height: 1.6
-
-body
-  /* Evitamos que el contenido se oculte debajo del footer */
-  flex: 1  /* Permite que el contenido ocupe el espacio disponible */
-  padding-bottom: 60px  /* Asegura que no se solape con el footer */
-
-/* Colores generales */
+/* Reset y variables */
 $color-principal: #5ea8a7
 $color-secundario: #257985
 $color-texto: #333
 
-/* Estilos de la barra de navegación */
+/* Estilos base */
+html, body
+  height: 100%
+  margin: 0
+  padding: 0
+
+/* Contenedor principal */
+.app-container
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+
+/* Header y Navbar */
+header
+  flex-shrink: 0
+
 .navbar
   padding: 0.5rem 0
   background-color: #fff
@@ -29,7 +29,6 @@ $color-texto: #333
   font-weight: bold
   color: $color-secundario
   text-transform: uppercase
-  font-family: 'Roboto', sans-serif 
 
 .nav-link-btn
   background-color: transparent
@@ -47,22 +46,27 @@ $color-texto: #333
     background-color: $color-principal
     color: white
 
-/* Estilos del footer */
+/* Main content */
+.main-content
+  flex: 1 0 auto
+  width: 100%
+  display: flex
+  flex-direction: column
+
+/* Footer */
 footer
+  flex-shrink: 0
   background-color: $color-principal
   color: white
-  text-align: center
   padding: 1.5rem 0
-  position: relative  /* El footer no se fija en la parte inferior */
-  margin-top: auto  /* Hace que el footer se mueva hacia abajo si hay poco contenido */
+  margin-top: auto
+  width: 100%
 
-/* Footer responsive y estilizado */
 .footer-container
   display: flex
   justify-content: center
   align-items: center
   gap: 2rem
-  flex-wrap: wrap
   font-size: 0.875rem
 
 .footer-link
@@ -76,10 +80,3 @@ footer
 .footer-copy
   color: white
   font-weight: 500
-
-/* Estilos para las secciones */
-section
-  display: flex
-  justify-content: center  /* Centra horizontalmente */
-  align-items: center  /* Centra verticalmente */
-  text-align: center  /* Centra el texto dentro de las secciones */
