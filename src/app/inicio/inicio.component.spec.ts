@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { InicioComponent } from './inicio.component';
 
 describe('InicioComponent', () => {
@@ -12,6 +11,13 @@ describe('InicioComponent', () => {
     });
     fixture = TestBed.createComponent(InicioComponent);
     component = fixture.componentInstance;
+
+    component.testimonios = [
+      { texto: "CodeMentor ha cambiado mi forma de estudiar.", autor: "Juan Pérez, Estudiante de Desarrollo Web" },
+      { texto: "Una herramienta indispensable para organizarme.", autor: "Laura García, Ingeniera de Software" },
+      { texto: "El mejor recurso para mejorar mi aprendizaje.", autor: "Carlos Sánchez, Programador Junior" }
+    ];
+
     fixture.detectChanges();
   });
 
@@ -19,9 +25,3 @@ describe('InicioComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
-testimonios = [
-  { texto: "CodeMentor ha cambiado mi forma de estudiar.", autor: "Juan Pérez, Estudiante de Desarrollo Web" },
-  { texto: "Una herramienta indispensable para organizarme.", autor: "Laura García, Ingeniera de Software" },
-  { texto: "El mejor recurso para mejorar mi aprendizaje.", autor: "Carlos Sánchez, Programador Junior" }
-];
