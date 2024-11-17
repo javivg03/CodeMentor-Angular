@@ -28,17 +28,6 @@ Este proyecto es una **web corporativa** desarrollada como parte de la asignatur
 ## 🗂️ Estructura del Proyecto
 
 El proyecto está organizado en **componentes**, cada uno representando una página de la aplicación. Además, el `AppComponent` actúa como contenedor principal, incluyendo el **header** y **footer**.
-src/
-├── app/
-│   ├── components/
-│   │   ├── inicio/              # Página "Inicio"
-│   │   ├── sobre-nosotros/      # Página "Sobre mi empresa"
-│   │   ├── contacto/            # Página "Contacto"
-│   │   ├── servicios/           # Página "Servicios"
-│   │   └── politica-privacidad/ # Página "Política de privacidad"
-│   ├── app.component.html  # Contenedor principal con header y footer
-│   ├── app-routing.module.ts # Configuración de rutas
-|   ├── styles.sass  # Estilos generales de la aplicación
 
 ---
 
