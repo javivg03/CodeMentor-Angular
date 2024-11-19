@@ -3,23 +3,57 @@
     <h1 class="text-center mb-4">Contacto</h1>
     
     <div class="formulario">
-      <form>
+      <!-- Vincula el formulario reactivo -->
+      <form [formGroup]="contactoForm" (ngSubmit)="onSubmit()">
+        <!-- Campo: Nombre -->
         <div class="form-group">
           <label for="name">Nombre</label>
-          <input type="text" class="form-control" id="name" placeholder="Introduce tu nombre" required>
+          <input 
+            type="text" 
+            id="name" 
+            class="form-control" 
+            formControlName="name" 
+            placeholder="Introduce tu nombre">
+          <!-- Mensaje de error -->
+          <small *ngIf="contactoForm.get('name')?.invalid && contactoForm.get('name')?.touched">
+            Nombre es obligatorio y debe tener al menos 3 caracteres.
+          </small>
         </div>
         
+        <!-- Campo: Correo electrónico -->
         <div class="form-group">
           <label for="email">Correo electrónico</label>
-          <input type="email" class="form-control" id="email" placeholder="Introduce tu correo electrónico" required>
+          <input 
+            type="email" 
+            id="email" 
+            class="form-control" 
+            formControlName="email" 
+            placeholder="Introduce tu correo electrónico">
+          <!-- Mensaje de error -->
+          <small *ngIf="contactoForm.get('email')?.invalid && contactoForm.get('email')?.touched">
+            Ingresa un correo válido.
+          </small>
         </div>
     
+        <!-- Campo: Mensaje -->
         <div class="form-group">
           <label for="message">Mensaje</label>
-          <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+          <textarea 
+            id="message" 
+            class="form-control" 
+            rows="4" 
+            formControlName="message" 
+            placeholder="Escribe tu mensaje"></textarea>
+          <!-- Mensaje de error -->
+          <small *ngIf="contactoForm.get('message')?.invalid && contactoForm.get('message')?.touched">
+            Mensaje es obligatorio y debe tener al menos 10 caracteres.
+          </small>
         </div>
         
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <!-- Botón de envío -->
+        <button type="submit" class="btn btn-primary" [disabled]="contactoForm.invalid">
+          Enviar
+        </button>
       </form>
     </div>
   </div>
